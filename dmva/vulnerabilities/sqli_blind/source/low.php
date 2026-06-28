@@ -4,6 +4,10 @@ if( isset( $_GET[ 'Submit' ] ) ) {
 	// Get input
 	$id = $_GET[ 'id' ];
 	$exists = false;
+	global $_DVWA;
+	if (!isset($_DVWA['SQLI_DB'])) {
+		$_DVWA['SQLI_DB'] = MYSQL;
+	}
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:

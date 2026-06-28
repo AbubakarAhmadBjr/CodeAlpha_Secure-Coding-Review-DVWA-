@@ -4,6 +4,7 @@ if( isset( $_COOKIE[ 'id' ] ) ) {
 	// Get input
 	$id = $_COOKIE[ 'id' ];
 	$exists = false;
+	global $_DVWA;
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
